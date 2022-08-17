@@ -68,6 +68,7 @@ const Main = styled(motion.div)`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    backdrop-filter: blur(4px);
   }
 `;
 const AboutPage = () => {
@@ -109,7 +110,7 @@ const AboutPage = () => {
             <br />I believe everything is an Art when you put your consciousness
             in it. You can connect with me via social links.{" "}
           </Main>
-          <BigTitle text="ABOUT" top="10%" left="5%" />
+          <BigTitle text="Hi..." top="10%" left="5%" />
         </Box>
       </Suspense>
     </ThemeProvider>
