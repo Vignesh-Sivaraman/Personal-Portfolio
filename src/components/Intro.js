@@ -1,7 +1,10 @@
+// This is the main page
+
 import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import Me from "../assets/Images/profile-img.png";
+import { keyframes } from "styled-components";
 
 const Box = styled(motion.div)`
   position: absolute;
@@ -33,11 +36,14 @@ const Box = styled(motion.div)`
     border-left-width: initial;
     border-right-color: initial;
     border-left-color: initial;
-    background: linear-gradient(rgb(252, 246, 244) 50%, rgb(0, 0, 0) 50%) 0px
+    background: linear-gradient(rgb(252, 246, 244) 50%, rgb(51, 58, 86) 50%) 0px
         0px / 2px 100% no-repeat,
-      linear-gradient(rgb(252, 246, 244) 50%, rgb(0, 0, 0) 50%) 100% 0px;
-    background-image: linear-gradient(rgb(252, 246, 244) 50%, rgb(0, 0, 0) 50%),
-      linear-gradient(rgb(252, 246, 244) 50%, rgb(0, 0, 0) 50%);
+      linear-gradient(rgb(252, 246, 244) 50%, rgb(51, 58, 86) 50%) 100% 0px;
+    background-image: linear-gradient(
+        rgb(252, 246, 244) 50%,
+        rgb(51, 58, 86) 50%
+      ),
+      linear-gradient(rgb(252, 246, 244) 50%, rgb(51, 58, 86) 50%);
     background-size: 2px 100%;
     background-attachment: initial;
     background-origin: initial;
@@ -46,7 +52,7 @@ const Box = styled(motion.div)`
     border-style: solid none;
     border-image: initial;
     border-top: 2px solid rgb(252, 246, 244);
-    border-bottom: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(51, 58, 86);
     background-position: 0px 0px, 100% 0px;
     background-repeat: no-repeat;
     width: 70vw;
@@ -96,6 +102,40 @@ const Text = styled.div`
   }
 `;
 
+// this is for the vector image animation
+
+const float = keyframes`
+0% { transform: scale(1.1) }
+25% { transform: skewY(2deg)}
+    50% { transform: skewY(-2deg)}
+    75% { transform: skewY(0deg)}
+    100% { transform: scale(1.1)}
+`;
+
+const SpaceMan = styled(motion.div)`
+  width: 50%;
+  position: relative;
+  display: flex;
+  animation: ${float} 4s ease infinite;
+  top: 5%;
+  .pic {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+
+    transform: scale(1.1) 
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: 50%;
+    .pic {
+      width: 90%;
+    }
+`;
+
 const Intro = () => {
   return (
     <Box
@@ -116,7 +156,7 @@ const Intro = () => {
           </h6>
         </Text>
       </SubBox>
-      <SubBox>
+      <SpaceMan>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -124,7 +164,7 @@ const Intro = () => {
         >
           <img className="pic" src={Me} alt="Profile Pic" />
         </motion.div>
-      </SubBox>
+      </SpaceMan>
     </Box>
   );
 };

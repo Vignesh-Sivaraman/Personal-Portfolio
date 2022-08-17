@@ -15,12 +15,12 @@ const Icons = styled.div`
   }
 
   .social-Icon {
-    fill: white;
+    fill: ${(props) => props.theme.body};
   }
 
   @media (max-width: 1024px) {
     .social-Icon {
-      fill: black;
+      fill: ${(props) => props.theme.text};
     }
     left: 1rem;
   }

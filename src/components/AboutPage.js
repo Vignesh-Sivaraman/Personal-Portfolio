@@ -1,18 +1,18 @@
+// This is the About page
+
 import { motion } from "framer-motion";
 import { lazy, Suspense } from "react";
 import styled, { keyframes, ThemeProvider } from "styled-components";
-
-import { DarkTheme, mediaQueries } from "./Themes";
+import { LightTheme } from "./Themes";
 import astronaut from "../assets/Images/spaceman.png";
 import Loading from "../subComponents/Loading";
 
-//Components
-// const SocialIcons = lazy(() => import("../subComponents/SocialIcons"));
-// const PowerButton = lazy(() => import("../subComponents/PowerButton"));
 const LogoName = lazy(() => import("../subComponents/LogoName"));
+const HomeButton = lazy(() => import("../subComponents/HomeButton"));
 const ParticleComponent = lazy(() =>
   import("../subComponents/ParticleComponent")
 );
+
 const BigTitle = lazy(() => import("../subComponents/BigTitle"));
 
 const Box = styled(motion.div)`
@@ -22,7 +22,7 @@ const Box = styled(motion.div)`
   position: relative;
   overflow: hidden;
 `;
-
+// This is for the Image animation effect
 const float = keyframes`
 0% { transform: translateY(-10px)         }
     50% { transform: translateY(15px) translateX(15px)        }
@@ -41,8 +41,8 @@ const SpaceMan = styled(motion.div)`
   }
 `;
 const Main = styled(motion.div)`
-  border: 2px solid ${(props) => props.theme.text};
-  color: ${(props) => props.theme.text};
+  border: 2px solid ${(props) => props.theme.body};
+  color: ${(props) => props.theme.body};
   padding: 2rem;
   width: 50vw;
   height: 60vh;
@@ -60,11 +60,21 @@ const Main = styled(motion.div)`
 
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
+  @media (max-width: 1024px) {
+    width: 50vw;
+    height: auto;
+    backdrop-filter: none;
+    margin-top: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `;
 const AboutPage = () => {
   return (
-    <ThemeProvider theme={DarkTheme}>
+    <ThemeProvider theme={LightTheme}>
       <Suspense fallback={<Loading />}>
+        <HomeButton />
         <Box
           key="skills"
           initial={{ opacity: 0 }}

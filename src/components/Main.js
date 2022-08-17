@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import LogoName from "../subComponents/LogoName";
 import SocialIcons from "../subComponents/SocialIcons";
 import { YinYang } from "./AllSvgs";
 import Intro from "./Intro";
@@ -8,6 +7,8 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { lazy, Suspense, useState } from "react";
 import Loading from "../subComponents/Loading";
+
+const LogoName = lazy(() => import("./../subComponents/LogoName"));
 
 const MainContainer = styled(motion.div)`
   background: ${(props) => props.theme.body};
@@ -32,7 +33,7 @@ const Container = styled.div`
 const DarkDiv = styled(motion.div)`
   position: absolute;
   top: 0;
-  background-color: #000;
+  background-color: #333a56;
   bottom: 0;
   right: 50%;
   width: 50%;
@@ -58,8 +59,8 @@ to{
 
 const Corner = styled.button`
   position: absolute;
-  top: 85%;
-  left: 92%;
+  top: 90%;
+  left: 95%;
   transform: translate(-50%, -50%);
   border: none;
   outline: none;
@@ -94,6 +95,9 @@ const ABOUT = styled(NavLink)`
   color: ${(props) => props.theme.body};
   text-decoration: none;
   z-index: 1;
+  @media (max-width: 1024px) {
+    color: ${(props) => props.theme.text};
+  }
 `;
 
 const SKILLS = styled(NavLink)`
@@ -102,11 +106,36 @@ const SKILLS = styled(NavLink)`
   z-index: 1;
 `;
 
-function Main() {
-  const [click, setClick] = useState(false);
-  const [path, setpath] = useState("");
+const BLOG = styled(NavLink)`
+  color: ${(props) => props.theme.text};
+  position: absolute;
+  top: 50%;
+  right: calc(1rem + 2vw);
+  transform: rotate(90deg) translate(-50%, -50%);
+  z-index: 1;
 
-  // const handleClick = () => setClick(!click);
+  text-decoration: none;
+  @media (max-width: 1024px) {
+    text-shadow: 0 0 4px #000;
+    color: ${(props) => props.theme.body};
+  }
+`;
+const WORK = styled(NavLink)`
+  color: ${(props) => props.theme.body};
+  position: absolute;
+  top: 50%;
+  left: calc(1rem + 2vw);
+  transform: translate(-50%, -50%) rotate(-90deg);
+  z-index: 1;
+  text-decoration: none;
+  @media (max-width: 1024px) {
+    text-shadow: 0 0 4px #000;
+  }
+`;
+
+// This function is written for the page transition
+function Main() {
+  const [path, setpath] = useState("");
 
   const moveY = {
     y: "-100%",
@@ -114,7 +143,6 @@ function Main() {
   const moveX = {
     x: `${path === "about" ? "100%" : "-100%"}`,
   };
-  const mq = window.matchMedia("(max-width: 50em)").matches;
   return (
     <Suspense fallback={<Loading />}>
       <MainContainer
@@ -127,20 +155,51 @@ function Main() {
         <DarkDiv
           initial={{ width: 0 }}
           animate={{ width: "100%" }}
-          transition={{ type: "spring", duration: 0.5, delay: 0 }}
+          transition={{ type: "ease-in", duration: 0.1, delay: 0 }}
         />
         <Container>
           <LogoName></LogoName>
           <SocialIcons></SocialIcons>
           <Corner>
-            <YinYang width={120} height={120} fill="currentColor" />
+            <YinYang width={120} height={120} fill="#333a56" />
           </Corner>
-          <BottomBar>
-            <ABOUT
-              onClick={() => setClick(false)}
-              click={mq ? +false : +click}
-              to="/about"
+          <BLOG onClick={() => setpath("blog")} to="/blog">
+            <motion.h2
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
+              Blog
+            </motion.h2>
+          </BLOG>
+
+          <WORK to="/work">
+            <motion.h2
+              onClick={() => setpath("work")}
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Work
+            </motion.h2>
+          </WORK>
+
+          <BottomBar>
+            <ABOUT to="/about">
               <motion.h2
                 onClick={() => setpath("about")}
                 initial={{
@@ -159,6 +218,7 @@ function Main() {
             </ABOUT>
             <SKILLS to="/skills">
               <motion.h2
+                onClick={() => setpath("skills")}
                 initial={{
                   y: 200,
                   transition: { type: "spring", duration: 1.5, delay: 1 },
