@@ -8,6 +8,7 @@ import Loading from "./subComponents/Loading";
 
 const Main = lazy(() => import("./components/Main"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
+const MySkills = lazy(() => import("./components/MySkills"));
 
 function App() {
   const location = useLocation();
@@ -20,6 +21,7 @@ function App() {
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Main />} />
               <Route path="/about" element={<AboutPage />} />
+              <Route path="/skills" element={<MySkills />} />
             </Routes>
           </AnimatePresence>
         </Suspense>

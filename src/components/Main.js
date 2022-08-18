@@ -14,6 +14,7 @@ const MainContainer = styled(motion.div)`
   background: ${(props) => props.theme.body};
   width: 100vw;
   height: 100vh;
+  max-height: -webkit-fill-available;
   overflow: hidden;
   position: relative;
   h2,

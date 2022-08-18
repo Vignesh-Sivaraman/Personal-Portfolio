@@ -40,6 +40,7 @@ const SpaceMan = styled(motion.div)`
     height: auto;
   }
 `;
+
 const Main = styled(motion.div)`
   border: 2px solid ${(props) => props.theme.body};
   color: ${(props) => props.theme.body};
