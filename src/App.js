@@ -5,6 +5,9 @@ import { LightTheme } from "./components/Themes";
 import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 import Loading from "./subComponents/Loading";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 
 const Main = lazy(() => import("./components/Main"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
