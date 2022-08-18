@@ -60,7 +60,7 @@ const Box = styled(motion.div)`
     justify-content: space-between;
   }
   @media (max-width: 380px) {
-    height: 70vh !important;
+    height: 60vh !important;
   }
 `;
 const SubBox = styled(motion.div)`
