@@ -31,7 +31,7 @@ const float = keyframes`
 
 const SpaceMan = styled(motion.div)`
   position: absolute;
-  top: 15%;
+  top: 10%;
   right: 3%;
   animation: ${float} 4s ease infinite;
   width: 20vw;

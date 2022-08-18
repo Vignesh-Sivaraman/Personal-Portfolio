@@ -56,8 +56,12 @@ const Box = styled(motion.div)`
     background-position: 0px 0px, 100% 0px;
     background-repeat: no-repeat;
     width: 70vw;
+    height: 60vh !important;
     flex-direction: column;
     justify-content: space-between;
+  }
+  @media (max-width: 380px) {
+    height: 65vh !important;
   }
 `;
 const SubBox = styled(motion.div)`
