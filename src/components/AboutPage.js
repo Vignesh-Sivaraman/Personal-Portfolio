@@ -62,7 +62,7 @@ const Main = styled(motion.div)`
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
   @media (max-width: 1024px) {
-    width: 50vw;
+    width: 70vw;
     height: auto;
     backdrop-filter: none;
     margin-top: 2rem;
