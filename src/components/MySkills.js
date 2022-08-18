@@ -1,7 +1,7 @@
 import React from "react";
 
 function MySkills() {
-  return <div>MySkills</div>;
+  return <div>hello</div>;
 }
 
 export default MySkills;
