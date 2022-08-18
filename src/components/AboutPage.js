@@ -32,7 +32,7 @@ const float = keyframes`
 const SpaceMan = styled(motion.div)`
   position: absolute;
   top: 10%;
-  right: 5%;
+  right: 3%;
   animation: ${float} 4s ease infinite;
   width: 20vw;
   img {
@@ -61,7 +61,7 @@ const Main = styled(motion.div)`
   font-family: "Ubuntu Mono", monospace;
   font-style: italic;
   @media (max-width: 1024px) {
-    width: 45vw;
+    width: 50vw;
     height: auto;
     backdrop-filter: none;
     margin-top: 2rem;
