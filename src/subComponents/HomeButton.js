@@ -6,7 +6,7 @@ const Home = styled.button`
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;
-  z-index: 1;
+  z-index: 5;
   background-color: transparent;
   border: none;
   h3 {

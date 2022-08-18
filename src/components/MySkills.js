@@ -40,7 +40,6 @@ const Main = styled.div`
     opacity: 0.5;
   }
   @media (max-width: 1024px) {
-    top: 10% !important;
     overflow: auto;
     width: 100%;
   }
@@ -64,7 +63,7 @@ function MySkills() {
         <ParticleComponent />
         <Main className="container">
           <div className="container heading my-3">
-            <h2>Front-End Technologies</h2>
+            <h3>Front-End Technologies</h3>
           </div>
           <SubBox className="container my-4">
             <div className="row">
@@ -106,7 +105,7 @@ function MySkills() {
             </div>
           </SubBox>
           <div className="container heading my-3">
-            <h2>Back-End Technologies</h2>
+            <h3>Back-End Technologies</h3>
           </div>
           <SubBox className="container my-4">
             <div className="row">
@@ -128,7 +127,7 @@ function MySkills() {
             </div>
           </SubBox>
           <div className="container heading my-3">
-            <h2>Proficient tools</h2>
+            <h3>Proficient tools</h3>
           </div>
           <SubBox className="container my-4">
             <div className="row">
