@@ -48,6 +48,7 @@ const Main = styled.div`
 const SubBox = styled.div`
   border: 2px solid #fff;
   border-radius: 10px;
+  box-shadow: 5px 3px 5px 2px #0ff;
   width: 100%;
 
   @media (max-width: 1024px) {
