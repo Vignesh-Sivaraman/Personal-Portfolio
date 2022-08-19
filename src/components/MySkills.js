@@ -6,9 +6,7 @@ import github from "../assets/Images/GitHub.png";
 import { lazy, Suspense } from "react";
 import Loading from "../subComponents/Loading";
 
-const ParticleComponent = lazy(() =>
-  import("../subComponents/ParticleComponent")
-);
+const ParticleSkills = lazy(() => import("../subComponents/ParticleSkills"));
 
 const HomeButton = lazy(() => import("../subComponents/HomeButton"));
 
@@ -61,7 +59,7 @@ function MySkills() {
     <Suspense fallback={<Loading />}>
       <HomeButton />
       <Box>
-        <ParticleComponent />
+        <ParticleSkills />
         <Main className="container">
           <div className="container heading my-3">
             <h3>Front-End Technologies</h3>
