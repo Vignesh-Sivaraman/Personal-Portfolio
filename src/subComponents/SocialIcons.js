@@ -42,30 +42,13 @@ function SocialIcons() {
       <div>
         <a
           className="social-Icon"
-          href={"https://www.google.co.in/"}
+          href={"https://github.com/Vignesh-Sivaraman"}
           target="_blank"
         >
           <Github width={25} height={25} />
         </a>
       </div>
-      <div>
-        <a
-          className="social-Icon"
-          href={"https://www.google.co.in/"}
-          target="_blank"
-        >
-          <Facebook width={25} height={25} />
-        </a>
-      </div>
-      <div>
-        <a
-          className="social-Icon"
-          href={"https://www.google.co.in/"}
-          target="_blank"
-        >
-          <Twitter width={25} height={25} />
-        </a>
-      </div>
+
       <Line />
     </Icons>
   );

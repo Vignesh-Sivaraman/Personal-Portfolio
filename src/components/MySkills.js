@@ -3,8 +3,10 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 import SkillLogo from "../subComponents/SkillLogo";
 import github from "../assets/Images/GitHub.png";
+import html from "../assets/Images/html.png";
 import { lazy, Suspense } from "react";
 import Loading from "../subComponents/Loading";
+import { Icon } from "@iconify/react";
 
 const ParticleSkills = lazy(() => import("../subComponents/ParticleSkills"));
 
@@ -19,7 +21,7 @@ const Box = styled.div`
 `;
 
 const Main = styled.div`
-  width: 50%;
+  width: 40%;
   max-height: 100%;
   position: relative;
   display: flex;
@@ -50,9 +52,11 @@ const SubBox = styled.div`
   width: 100%;
 
   @media (max-width: 1024px) {
-    width: 70%;
+    width: 100%;
   }
 `;
+
+const Title = styled.div``;
 
 function MySkills() {
   return (
@@ -64,78 +68,33 @@ function MySkills() {
           <div className="container heading my-3">
             <h3>Front-End Technologies</h3>
           </div>
-          <SubBox className="container my-4">
-            <div className="row">
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-plain.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-plain-wordmark.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"
-                }
-              />
+          <SubBox className="container my-4 ">
+            <div className="row px-2">
+              <SkillLogo source={"vscode-icons:file-type-html"} />
+              <SkillLogo source={"vscode-icons:file-type-css"} />
+              <SkillLogo source={"logos:javascript"} />
+              <SkillLogo source={"logos:bootstrap"} />
+              <SkillLogo source={"logos:react"} />
             </div>
           </SubBox>
           <div className="container heading my-3">
             <h3>Back-End Technologies</h3>
           </div>
           <SubBox className="container my-4">
-            <div className="row">
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                }
-              />
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-plain-wordmark.svg"
-                }
-              />
+            <div className="row px-2">
+              <SkillLogo source={"vscode-icons:file-type-node"} />
+              <SkillLogo source={"vscode-icons:file-type-sql"} />
+              <SkillLogo source={"logos:mongodb-icon"} />
             </div>
           </SubBox>
           <div className="container heading my-3">
             <h3>Proficient tools</h3>
           </div>
           <SubBox className="container my-4">
-            <div className="row">
-              <SkillLogo
-                source={
-                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original-wordmark.svg"
-                }
-              />
-              <SkillLogo source={github} />
+            <div className="row px-2">
+              <SkillLogo source={"vscode-icons:file-type-vscode"} />
+              <SkillLogo source={"fa6-brands:github"} color={"white"} />
+              <SkillLogo source={"logos:firebase"} />
             </div>
           </SubBox>
         </Main>

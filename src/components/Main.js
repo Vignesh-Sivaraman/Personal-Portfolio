@@ -107,7 +107,7 @@ const SKILLS = styled(NavLink)`
   z-index: 1;
 `;
 
-const BLOG = styled(NavLink)`
+const WORK = styled(NavLink)`
   color: ${(props) => props.theme.text};
   position: absolute;
   top: 50%;
@@ -121,7 +121,7 @@ const BLOG = styled(NavLink)`
     color: ${(props) => props.theme.body};
   }
 `;
-const WORK = styled(NavLink)`
+const CONTACT = styled(NavLink)`
   color: ${(props) => props.theme.body};
   position: absolute;
   top: 50%;
@@ -164,26 +164,8 @@ function Main() {
           <Corner>
             <YinYang width={120} height={120} fill="#333a56" />
           </Corner>
-          <BLOG onClick={() => setpath("blog")} to="/blog">
+          <WORK onClick={() => setpath("work")} to="/work">
             <motion.h2
-              initial={{
-                y: -200,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              animate={{
-                y: 0,
-                transition: { type: "spring", duration: 1.5, delay: 1 },
-              }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Blog
-            </motion.h2>
-          </BLOG>
-
-          <WORK to="/work">
-            <motion.h2
-              onClick={() => setpath("work")}
               initial={{
                 y: -200,
                 transition: { type: "spring", duration: 1.5, delay: 1 },
@@ -198,6 +180,24 @@ function Main() {
               Work
             </motion.h2>
           </WORK>
+
+          <CONTACT to="/contact">
+            <motion.h2
+              onClick={() => setpath("contact")}
+              initial={{
+                y: -200,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              animate={{
+                y: 0,
+                transition: { type: "spring", duration: 1.5, delay: 1 },
+              }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              Reach me
+            </motion.h2>
+          </CONTACT>
 
           <BottomBar>
             <ABOUT to="/about">

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const Home = styled.button`
-  position: absolute;
+  position: fixed;
   top: 2rem;
   right: calc(1rem + 2vw);
   text-decoration: none;

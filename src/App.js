@@ -6,12 +6,13 @@ import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 import Loading from "./subComponents/Loading";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import "./App.css";
 
 const Main = lazy(() => import("./components/Main"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
 const MySkills = lazy(() => import("./components/MySkills"));
+const Work = lazy(() => import("./components/Work"));
 
 function App() {
   const location = useLocation();
@@ -25,6 +26,7 @@ function App() {
               <Route path="/" element={<Main />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/skills" element={<MySkills />} />
+              <Route path="/work" element={<Work />} />
             </Routes>
           </AnimatePresence>
         </Suspense>

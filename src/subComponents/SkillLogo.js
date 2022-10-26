@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Icon } from "@iconify/react";
 
 const Main = styled.div`
   text-align: center;
@@ -8,7 +9,7 @@ const Main = styled.div`
 function SkillLogo(props) {
   return (
     <Main className="col-6 col-lg-3 my-2">
-      <img src={props.source} alt="" width="80px" height="80px" />
+      <Icon icon={props.source} width="75" height="75" color={props.color} />
     </Main>
   );
 }
