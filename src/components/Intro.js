@@ -125,18 +125,19 @@ const SpaceMan = styled(motion.div)`
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translate(-50%, 0%);
+    transform: scale(1) translate(-50%, 10%);
 
-    transform: scale(1.1) 
     width: 100%;
     height: auto;
   }
   @media (max-width: 1024px) {
     width: 100%;
     height: 50%;
+    transform: scale(0.5) translate(-35%, -15%);
     .pic {
       width: 90%;
     }
+  }
 `;
 
 const Intro = () => {
