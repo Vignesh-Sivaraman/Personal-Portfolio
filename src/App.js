@@ -8,6 +8,7 @@ import Loading from "./subComponents/Loading";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./App.css";
+import Contacts from "./components/Contact";
 
 const Main = lazy(() => import("./components/Main"));
 const AboutPage = lazy(() => import("./components/AboutPage"));
@@ -27,6 +28,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/skills" element={<MySkills />} />
               <Route path="/work" element={<Work />} />
+              <Route path="/contact" element={<Contacts />} />
             </Routes>
           </AnimatePresence>
         </Suspense>

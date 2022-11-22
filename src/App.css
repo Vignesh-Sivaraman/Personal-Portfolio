@@ -2,3 +2,8 @@
 span {
   font-size: initial !important;
 } */
+
+.formbtn:hover {
+  background-color: white !important;
+  color: black !important;
+}
