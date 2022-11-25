@@ -72,7 +72,7 @@ const Contacts = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 1, delay: 1 } }}
           >
-            <div>Please submit the form below for me to reach you</div>
+            <div>Please fill in the below details</div>
             <div>
               {" "}
               <form
@@ -99,7 +99,7 @@ const Contacts = () => {
                 </div>
                 <div>
                   <button className=" border-2 bg-primary text-white mt-4 px-4 py-3 my-8 mx-auto flex items-center formbtn ">
-                    Lets's Collaborate
+                    submit
                   </button>
                 </div>
               </form>
