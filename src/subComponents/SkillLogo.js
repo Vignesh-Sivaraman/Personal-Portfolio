@@ -9,7 +9,9 @@ const Main = styled.div`
 function SkillLogo(props) {
   return (
     <Main className="col-6 col-lg-3 my-2">
-      <Icon icon={props.source} width="75" height="75" color={props.color} />
+      {/*<Icon icon={props.source} width="75" height="75" color={props.color} />*/}
+
+      <img src={props.source} alt="logo" />
     </Main>
   );
 }

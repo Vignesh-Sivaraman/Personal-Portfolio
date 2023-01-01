@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { mediaQueries } from "../components/Themes";
 
-const Box = styled(motion(NavLink))`
+const Box = styled(motion.a)`
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   text-decoration: none;
-  width: calc(10rem + 15vw);
-  height: auto;
+  width: calc(22rem + 15vw);
+  min-height: 625px;
   border: 2px solid ${(props) => props.theme.body};
   padding: 1rem;
   color: ${(props) => props.theme.body};
@@ -46,11 +46,15 @@ const Box = styled(motion(NavLink))`
 const Image = styled.div`
   background-image: ${(props) => `url(${props.img})`};
   width: 100%;
-  height: 100px;
+  height: 350px;
   background-size: cover;
   border: 1px solid transparent;
   background-position: center center;
-
+  background-repeat: no-repeat;
+  @media (max-width: 768px) {
+    background-image: ${(props) => `url(${props.mobile})`};
+    background-size: contain;
+  }
   ${Box}:hover & {
     border: 1px solid ${(props) => props.theme.body};
   }
@@ -113,11 +117,11 @@ const item = {
 };
 
 const WorkComponent = (props) => {
-  const { name, tags, date, imgSrc, link, features } = props.blog;
+  const { name, tags, date, imgSrc, link, features, mobile } = props.blog;
   return (
     <Container variants={item}>
-      <Box target="_blank" to={link}>
-        <Image img={imgSrc} />
+      <Box href={link} target="_blank" rel="noreferrer">
+        <Image img={imgSrc} mobile={mobile}></Image>
         <Title>{name}</Title>
         <HashTags>{features}</HashTags>
         <HashTags>

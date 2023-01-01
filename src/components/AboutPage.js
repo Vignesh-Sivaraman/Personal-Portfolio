@@ -104,11 +104,12 @@ const AboutPage = () => {
             yet beautiful websites with great user experience.
             <br />
             <br />
-            I'm interested in the whole frontend stack Like trying new things
-            and building great projects. I'm an independent freelancer and
-            blogger. I love to write blogs and read books. <br />
-            <br />I believe everything is an Art when you put your consciousness
-            in it. You can connect with me via social links.{" "}
+            Skilled in conceptualizing, designing and providing logical
+            solutions using MERN stack. Looking for an opportunity to
+            collaborate in highly working environment and to apply my skills in
+            finding solutions.
+            <br />
+            <br />
           </Main>
           <BigTitle text="Hi there..." top="10%" left="5%" />
         </Box>

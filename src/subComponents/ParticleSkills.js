@@ -24,7 +24,7 @@ const ParticlesSkills = () => {
         autoPlay: true,
         background: {
           color: {
-            value: "#000",
+            value: "#333a56",
           },
           image: "",
           position: "",

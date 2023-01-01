@@ -1,12 +1,22 @@
 import React from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
 import SkillLogo from "../subComponents/SkillLogo";
-import github from "../assets/Images/GitHub.png";
-import html from "../assets/Images/html.png";
 import { lazy, Suspense } from "react";
 import Loading from "../subComponents/Loading";
-import { Icon } from "@iconify/react";
+import LogoName from "../subComponents/LogoName";
+// logo images
+
+import htmlLogo from "../assets/Images/html.png";
+import cssLogo from "../assets/Images/css.png";
+import jsLogo from "../assets/Images/js.png";
+import bootstrapLogo from "../assets/Images/Bootstrap.png";
+import reactLogo from "../assets/Images/react.png";
+import nodeLogo from "../assets/Images/node.png";
+import sqlLogo from "../assets/Images/sql.png";
+import mongoDBLogo from "../assets/Images/mongodb.png";
+import gitLogo from "../assets/Images/git.png";
+import firebaseLogo from "../assets/Images/firebase.png";
+import awsLogo from "../assets/Images/aws.png";
 
 const ParticleSkills = lazy(() => import("../subComponents/ParticleSkills"));
 
@@ -18,6 +28,8 @@ const Box = styled.div`
   height: 100vh;
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
 `;
 
 const Main = styled.div`
@@ -56,25 +68,24 @@ const SubBox = styled.div`
   }
 `;
 
-const Title = styled.div``;
-
 function MySkills() {
   return (
     <Suspense fallback={<Loading />}>
       <HomeButton />
+      <LogoName />
       <Box>
         <ParticleSkills />
         <Main className="container">
           <div className="container heading my-3">
-            <h3>Front-End Technologies</h3>
+            <h3 style={{ color: "white" }}>Front-End Technologies</h3>
           </div>
           <SubBox className="container my-4 ">
             <div className="row px-2">
-              <SkillLogo source={"vscode-icons:file-type-html"} />
-              <SkillLogo source={"vscode-icons:file-type-css"} />
-              <SkillLogo source={"logos:javascript"} />
-              <SkillLogo source={"logos:bootstrap"} />
-              <SkillLogo source={"logos:react"} />
+              <SkillLogo source={htmlLogo} />
+              <SkillLogo source={cssLogo} />
+              <SkillLogo source={jsLogo} />
+              <SkillLogo source={bootstrapLogo} />
+              <SkillLogo source={reactLogo} />
             </div>
           </SubBox>
           <div className="container heading my-3">
@@ -82,9 +93,9 @@ function MySkills() {
           </div>
           <SubBox className="container my-4">
             <div className="row px-2">
-              <SkillLogo source={"vscode-icons:file-type-node"} />
-              <SkillLogo source={"vscode-icons:file-type-sql"} />
-              <SkillLogo source={"logos:mongodb-icon"} />
+              <SkillLogo source={nodeLogo} />
+              <SkillLogo source={sqlLogo} />
+              <SkillLogo source={mongoDBLogo} />
             </div>
           </SubBox>
           <div className="container heading my-3">
@@ -92,9 +103,9 @@ function MySkills() {
           </div>
           <SubBox className="container my-4">
             <div className="row px-2">
-              <SkillLogo source={"vscode-icons:file-type-vscode"} />
-              <SkillLogo source={"fa6-brands:github"} color={"white"} />
-              <SkillLogo source={"logos:firebase"} />
+              <SkillLogo source={gitLogo} />
+              <SkillLogo source={firebaseLogo} />
+              <SkillLogo source={awsLogo} />
             </div>
           </SubBox>
         </Main>

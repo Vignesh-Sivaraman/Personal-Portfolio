@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { Facebook, Github, Twitter } from "../components/AllSvgs";
+import { Github, Design, Develope, Link } from "../components/AllSvgs";
+import resume from "../assets/Images/resume.png";
 
 const Icons = styled.div`
   display: flex;
@@ -41,11 +42,26 @@ function SocialIcons() {
     <Icons>
       <div>
         <a
+          title="Github"
           className="social-Icon"
           href={"https://github.com/Vignesh-Sivaraman"}
           target="_blank"
+          rel="noreferrer"
         >
           <Github width={25} height={25} />
+        </a>
+      </div>
+      <div>
+        <a
+          title="Resume"
+          className="social-Icon"
+          href={
+            "https://drive.google.com/file/d/1SjpEwojJl3Qo4A3W35SmDp3CilFuoqjx/view?usp=sharing"
+          }
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Develope width={25} height={25} />
         </a>
       </div>
 

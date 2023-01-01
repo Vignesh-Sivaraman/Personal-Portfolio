@@ -1,7 +1,6 @@
 import React from "react";
 import { lazy, Suspense, useEffect, useState } from "react";
 import styled from "styled-components";
-import bgimg from "../assets/Images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg";
 import WorkComponent from "../subComponents/WorkComponent";
 import { Works } from "../data/WorkData";
 import { mediaQueries } from "./Themes";
@@ -16,7 +15,6 @@ const ParticleComponent = lazy(() =>
 );
 
 const MainContainer = styled.div`
-  background-image: url(${bgimg});
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
