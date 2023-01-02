@@ -21,6 +21,17 @@ export const Works = [
   },
   {
     id: 2,
+    name: "Crowds, A mock of social media and chat app",
+    features:
+      "created with MySQL  and web sockets for real time chat feature with SQL database hosted in AWS RDS ",
+    tags: ["react", "MySQL", "AWS RDS"],
+    date: "28 Dec, 2022",
+    imgSrc: `${crowds}`,
+    link: "https://crowds-community.netlify.app/",
+    mobile: `${crowds_mobile}`,
+  },
+  {
+    id: 3,
     name: "Diet Hard, A mock of diet and fitness tracking app",
     features:
       "created with verification and metrics tracking features along with a decent UI/UX while following the MVC pattern for backend... ",
@@ -31,7 +42,7 @@ export const Works = [
     mobile: `${diet_hard_mobile}`,
   },
   {
-    id: 3,
+    id: 4,
     name: "Fairy Palace, A mock of Clothing app",
     features:
       "created with Google account integration using Firebase and pleasing data visaulization with charts and redux",
@@ -40,16 +51,5 @@ export const Works = [
     imgSrc: `${fairy_palace}`,
     link: "https://fairy-palace.netlify.app/",
     mobile: `${fairy_palace_mobile}`,
-  },
-  {
-    id: 4,
-    name: "Crowds, A mock of social media and chat app",
-    features:
-      "created with MySQL  and web sockets for real time chat feature with SQL database hosted in AWS RDS ",
-    tags: ["react", "MySQL", "AWS RDS"],
-    date: "28 Dec, 2022",
-    imgSrc: `${crowds}`,
-    link: "https://crowds-community.netlify.app/",
-    mobile: `${crowds_mobile}`,
   },
 ];
