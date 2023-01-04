@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { mediaQueries } from "../components/Themes";
 
-const Box = styled(motion.a)`
+const Box = styled(motion.div)`
   backdrop-filter: blur(2px);
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   text-decoration: none;
   width: calc(22rem + 15vw);
-  min-height: 625px;
+  min-height: 725px;
   border: 2px solid ${(props) => props.theme.body};
   padding: 1rem;
   color: ${(props) => props.theme.body};
@@ -116,12 +116,65 @@ const item = {
   show: { scale: 1, transition: { type: "spring", duration: 0.5 } },
 };
 
+const SiteButton = styled.a`
+  border: none;
+  color: #333a56;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 100px;
+  font-size: 1.25em;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #f7f5e6 !important ;
+  text-decoration: none;
+  &:hover {
+    color: #f7f5e6;
+    background-color: #333a56 !important;
+    border: 1px solid #f7f5e6 !important;
+  }
+  @media (max-width: 768px) {
+    font-size: 15px;
+    width: 75px;
+    height: 30px;
+  }
+`;
+
+const SiteButtonContainer = styled.div`
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+`;
+
 const WorkComponent = (props) => {
-  const { name, tags, date, imgSrc, link, features, mobile } = props.blog;
+  const {
+    name,
+    tags,
+    date,
+    imgSrc,
+    link,
+    features,
+    mobile,
+    frontend,
+    backend,
+  } = props.blog;
   return (
     <Container variants={item}>
-      <Box href={link} target="_blank" rel="noreferrer">
+      <Box>
         <Image img={imgSrc} mobile={mobile}></Image>
+        <SiteButtonContainer>
+          <SiteButton href={link} target="_blank" rel="noreferrer">
+            Go to Site
+          </SiteButton>
+          <SiteButton href={frontend} target="_blank" rel="noreferrer">
+            FrontEnd
+          </SiteButton>{" "}
+          <SiteButton href={backend} target="_blank" rel="noreferrer">
+            Backend
+          </SiteButton>
+        </SiteButtonContainer>
         <Title>{name}</Title>
         <HashTags>{features}</HashTags>
         <HashTags>

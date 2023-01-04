@@ -17,6 +17,9 @@ export const Works = [
     date: "05 Oct, 2022",
     imgSrc: `${pizza_lair}`,
     link: "https://viki-pizza-delivery-app.netlify.app",
+    frontend: "https://github.com/Vignesh-Sivaraman/pizza-delivery-app.git",
+    backend:
+      "https://github.com/Vignesh-Sivaraman/pizza-delivery-app-backend.git",
     mobile: `${pizza_lair_mobile}`,
   },
   {
@@ -28,6 +31,8 @@ export const Works = [
     date: "28 Dec, 2022",
     imgSrc: `${crowds}`,
     link: "https://crowds-community.netlify.app/",
+    frontend: "https://github.com/Vignesh-Sivaraman/Crowds.git",
+    backend: "https://github.com/Vignesh-Sivaraman/Crowds_Server.git",
     mobile: `${crowds_mobile}`,
   },
   {
@@ -39,6 +44,8 @@ export const Works = [
     date: "22 Nov, 2022",
     imgSrc: `${diet_hard}`,
     link: "https://diet-hard-app.netlify.app/",
+    frontend: "https://github.com/Vignesh-Sivaraman/Diet-Hard-app.git",
+    backend: "https://github.com/Vignesh-Sivaraman/Diet-Hard-server.git",
     mobile: `${diet_hard_mobile}`,
   },
   {
@@ -50,6 +57,8 @@ export const Works = [
     date: "10 Dec, 2022",
     imgSrc: `${fairy_palace}`,
     link: "https://fairy-palace.netlify.app/",
+    frontend: "https://github.com/Vignesh-Sivaraman/Fairy-Palace.git",
+    backend: "https://github.com/Vignesh-Sivaraman/Fairy-Palace.git",
     mobile: `${fairy_palace_mobile}`,
   },
 ];
